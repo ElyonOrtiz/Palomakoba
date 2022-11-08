@@ -1,0 +1,43 @@
+package Meupacote;
+
+public class Comissionado extends Empregado1  {//brutoVendas, taxaComissao,bonus
+	private double brutoVendas;
+	private double taxaComissao;
+	private double bonus;
+	
+	public double calculaSalario(){
+		return (((brutoVendas*taxaComissao)/100)+ bonus);
+	}
+	
+	public Comissionado(String nome, String depto, double brutoVendas, double taxaComissao, double bonus) {
+		super(nome, depto);
+		this.brutoVendas = brutoVendas;
+		this.taxaComissao = taxaComissao;
+		this.bonus = bonus;
+	}
+
+	public double getBrutoVendas() {
+		return brutoVendas;
+	}
+	public void setBrutoVendas(double brutoVendas) {
+		this.brutoVendas = brutoVendas;
+	}
+	public double getTaxaComissao() {
+		return taxaComissao;
+	}
+	public void setTaxaComissao(double taxaComissao) {
+		this.taxaComissao = taxaComissao;
+	}
+	public double getBonus() {
+		return bonus;
+	}
+	public void setBonus(double bonus) {
+		this.bonus = bonus;
+	}
+	@Override
+	public String toString() {
+		return "Comissionado [brutoVendas=" + brutoVendas + ", taxaComissao=" + taxaComissao + ", bonus=" + bonus + "]";
+	}
+	 
+
+}
